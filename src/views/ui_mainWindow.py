@@ -28,6 +28,8 @@ class Ui_MainWindow(object):
         self.label.setFont(font)
         self.label.setObjectName("label")
         self.label.setStyleSheet("background: #2b1b18")
+        
+        
         # CONTENEDOR SIMPLEX
         self.widgetSimplex = QtWidgets.QWidget(self.frame)
         self.widgetSimplex.setEnabled(True)
@@ -36,12 +38,13 @@ class Ui_MainWindow(object):
         self.widgetSimplex.setObjectName("widgetSimplex")
         self.widgetSimplex.setVisible(False)
         # CONTENEDOR PERL
-        self.widgetPerl = QtWidgets.QWidget(self.frame)
+        
+        """self.widgetPerl = QtWidgets.QWidget(self.frame)
         self.widgetPerl.setEnabled(True)
         self.widgetPerl.setGeometry(QtCore.QRect(0, 0, 1355, 690))
         self.widgetPerl.setStyleSheet("")
         self.widgetPerl.setObjectName("widgetPerl")
-        self.widgetPerl.setVisible(False)
+        self.widgetPerl.setVisible(False)"""
         MainWindow.setCentralWidget(self.centralwidget)
         
         
@@ -341,7 +344,7 @@ class Ui_MainWindow(object):
         self.tableResult.horizontalHeader().setDefaultAlignment(QtCore.Qt.AlignHCenter and QtCore.Qt.AlignVCenter and QtCore.Qt.AlignCenter)
         self.tableResult.horizontalHeader().setDefaultSectionSize(75)
         self.tableResult.setStyleSheet("background: #3999da")
-        # LABEL PIBOTE
+        # LABEL PIVOTE
         self.lblPibote = QtWidgets.QTextBrowser(self.groupBoxResul)
         self.lblPibote.setGeometry(QtCore.QRect(20, 778, 750, 40))
         font = QtGui.QFont()
@@ -384,7 +387,7 @@ class Ui_MainWindow(object):
         self.lblTotalTable.setStyleSheet("border: none; font-size: 18px")
         ########################################### UI - MÉTODO PERL ###########################################
         # GROUP BOX DATOS ACTIVIDADES
-        self.groupBoxDatosPerl = QtWidgets.QGroupBox(self.widgetPerl)
+        """self.groupBoxDatosPerl = QtWidgets.QGroupBox(self.widgetPerl)
         self.groupBoxDatosPerl.setGeometry(QtCore.QRect(30, 0, 1300, 80))
         font = QtGui.QFont()
         font.setFamily("time new roman")
@@ -662,7 +665,7 @@ class Ui_MainWindow(object):
         self.calendario.setVerticalHeaderFormat(QtWidgets.QCalendarWidget.NoVerticalHeader)
         self.calendario.setNavigationBarVisible(True)
         self.calendario.setStyleSheet("color: #000")
-        self.calendario.setObjectName("calendario")
+        self.calendario.setObjectName("calendario")"""
         
 
         self.retranslateUi(MainWindow)
@@ -671,7 +674,7 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         #################################### MAIN WINDOW ####################################
-        MainWindow.setWindowTitle(_translate("MainWindow", "CALCULADORA DEL METODO SIMPLEZ"))
+        MainWindow.setWindowTitle(_translate("MainWindow", "METODO SIMPLEX"))
         #self.label.setText(_translate("MainWindow", "BIENVENIDO"))
         self.menuM_todo.setTitle(_translate("MainWindow", "Método"))
         self.actionSimplex.setText(_translate("MainWindow", "Simplex"))
@@ -682,22 +685,22 @@ class Ui_MainWindow(object):
         self.lblRes.setText(_translate("MainWindow", "Ingrese el número de restricciones:"))
         self.btnGenerar.setText(_translate("MainWindow", "GENERAR"))
         self.groupBoxRestriccion.setTitle(_translate("MainWindow", "Restricciones"))
-        self.lblTextMaxZ.setText(_translate("MainWindow", "MAX Z ="))
+        self.lblTextMaxZ.setText(_translate("MainWindow", "MAXI Z ="))
         self.groupBoxFuncObj.setTitle(_translate("MainWindow", "Función Objetivo"))
         self.groupBoxAcciones.setTitle(_translate("MainWindow", "Acciones"))
         self.btnCalcular.setText(_translate("MainWindow", "CALCULAR"))
         self.btnCalPibote.setText(_translate("MainWindow", "CALCULAR PIVOTE"))
         self.btnPreviousTabla.setText(_translate("MainWindow", "ANTERIOR TABLA"))
         self.btnNextTabla.setText(_translate("MainWindow", "SIGUIENTE TABLA"))
-        self.btnNuevo.setText(_translate("MainWindow", "NUEVO"))
-        self.btnSalir.setText(_translate("MainWindow", "SALIR"))
-        self.btnSalir.setText(_translate("MainWindow", "SALIR"))
+        self.btnNuevo.setText(_translate("MainWindow", "Nuevo"))
+        self.btnSalir.setText(_translate("MainWindow", "Salir"))
+        self.btnSalir.setText(_translate("MainWindow", "Salir"))
         self.btnImprimir.setText(_translate("MainWindow", "IMPRIMIR"))
         self.groupBoxResul.setTitle(_translate("MainWindow", "Resultado"))
-        self.groupBoxRespuesta.setTitle(_translate("MainWindow", "Respuesta"))
+        self.groupBoxRespuesta.setTitle(_translate("MainWindow", "Respuesta: "))
         self.btnSimplex.setText(_translate("MainWindow", "NEXT"))
         #################################### UI - PERL ####################################
-        self.groupBoxDatosPerl.setTitle(_translate("MainWindow", "Datos"))
+        """self.groupBoxDatosPerl.setTitle(_translate("MainWindow", "Datos"))
         self.lblAct.setText(_translate("MainWindow", "Ingrese el número de actividades:"))
         self.lblInputAct.setText(_translate("MainWindow", "Ingrese todos los datos para continuar"))
         self.lblInfo.setText(_translate("MainWindow", 'Los predecesores debe ingresarlos en mayúscula. Ej: "A" | "A-B-C". En caso de no tener predecesor ingrese "N/A".'))
@@ -708,7 +711,7 @@ class Ui_MainWindow(object):
         self.btnCalcularPerl.setText(_translate("MainWindow", "CALCULAR"))
         self.btnBorrarPerl.setText(_translate("MainWindow", "BORRAR"))
         self.groupBoxDiasNoLab.setTitle(_translate("MainWindow", "DÍAS NO LABORABLES"))
-        self.groupBoxFechInicio.setTitle(_translate("MainWindow", "FECHA INICIO"))
+        self.groupBoxFechInicio.setTitle(_translate("MainWindow", "FECHA INICIO"))"""
 
 if __name__ == "__main__":
     import sys
