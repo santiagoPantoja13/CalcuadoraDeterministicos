@@ -2,7 +2,6 @@ from PyQt5.QtWidgets import *
 from PyQt5.QtGui import QIcon, QPixmap
 from PyQt5.QtCore import Qt
 from src.simplex import Simplex
-#from src.perl import Perl
 from src.views.ui_mainWindow import Ui_MainWindow
 import sys, os
 
@@ -35,13 +34,12 @@ class MainWindow(QMainWindow):
         self.ui.label.setPixmap(pixmap)
         self.ui.label.setAlignment(Qt.AlignCenter)
         
-        # Eventos
-        #self.ui.actionSimplex.triggered.connect(self.showSimplexUI)
-        self.showSimplexUI()
+    
+        self.UI_Metodo_Simplex()
 
-    # Método: Muestra la interfaz del método simplex  
-    def showSimplexUI(self):
-        #self.ui.widgetPerl.setVisible(False)
+    # interfaz método simplex  
+    def UI_Metodo_Simplex(self):
+        
         self.ui.widgetSimplex.setVisible(True)
         self.simplex = Simplex(self.ui, self.icoError, self.icoSucess, self.icoMain)
         self.simplex.deleteData()
@@ -50,8 +48,8 @@ class MainWindow(QMainWindow):
     
 # Inicia la aplicación
 if __name__ == '__main__':    
-    #app = QApplication([])
-   # app.setStyle(QStyleFactory.create('Fusion'))
+    app = QApplication([])
+    app.setStyle(QStyleFactory.create('Fusion'))
     mi_App = MainWindow()
     mi_App.show()
-    #sys.exit(app.exec_())
+    sys.exit(app.exec_())
